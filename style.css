@@ -6,7 +6,7 @@
 
 html {
     font-family: sans-serif;
-    font-size: 8px;
+    font-size: 16px;
 }
 
 .page-wrapper {
@@ -20,5 +20,12 @@ html {
 }
 
 .text {
-    font-size: 30rem;
+    font-size: 10rem;
+}
+
+/* media querry max width 560px */
+@media screen and (max-width: 560px) {
+    .text {
+        font-size: 3rem;
+    }
 }

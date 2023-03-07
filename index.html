@@ -14,10 +14,9 @@
 </body>
 </html>
 <script>
-    var words = ['JUST', 'TRY', 'NOT', 'TO', 'READ', 'THIS', '👻'];
+    var words = ['JUST', 'TRY', 'NOT', 'TO', 'READ', 'THIS', 'GOTCHA!'];
     var textElement = document.querySelector('.text');
     var counter = 0;
-    var interval = setInterval(displayText, 200); // run the displayText function every 200 milliseconds
     function displayText() {
         textElement.innerText = words[counter]; // element's text is the word on the position equal to the counter value
         counter++;  // increase the counter by one
@@ -27,4 +26,7 @@
             clearInterval(interval) // stop the interval from repeating
         }
     }
+    setTimeout(function() {
+        interval = setInterval(displayText, 200);
+    }, 1000);
 </script>
