@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Try not to read this</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <h1 class="text"></h1>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var words = ['JUST', 'TRY', 'NOT', 'TO', 'READ', 'THIS', '👻'];
+    var textElement = document.querySelector('.text');
+    var counter = 0;
+    var interval = setInterval(displayText, 200); // run the displayText function every 200 milliseconds
+    function displayText() {
+        textElement.innerText = words[counter]; // element's text is the word on the position equal to the counter value
+        counter++;  // increase the counter by one
+        if (counter >= words.length) { // if the counter's value is higher than the number of the words (word's array length),
+            // set the counter to 0
+            counter = 0;
+            clearInterval(interval) // stop the interval from repeating
+        }
+    }
+</script>
