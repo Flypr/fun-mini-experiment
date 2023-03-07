@@ -23,6 +23,11 @@ html {
     font-size: 10rem;
 }
 
+/* give the text font white outline */
+.text {
+    -webkit-text-stroke: 4px white;
+}
+
 /* media querry max width 560px */
 @media screen and (max-width: 560px) {
     .text {
