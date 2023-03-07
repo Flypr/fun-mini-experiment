@@ -17,6 +17,20 @@
     var words = ['JUST', 'TRY', 'NOT', 'TO', 'READ', 'THIS', 'GOTCHA!'];
     var textElement = document.querySelector('.text');
     var counter = 0;
+
+    //give the page wrapper and the text elements random colors but not the same and have high contrast
+    var randomColor = function() {
+        var color = Math.floor(Math.random() * 16777215).toString(16);
+        return color;
+    }
+    var randomColor1 = randomColor();
+    var randomColor2 = randomColor();
+    while (randomColor1 === randomColor2) {
+        randomColor2 = randomColor();
+    }
+    document.querySelector('.page-wrapper').style.backgroundColor = '#' + randomColor1;
+    document.querySelector('.text').style.color = '#' + randomColor2;
+
     function displayText() {
         textElement.innerText = words[counter]; // element's text is the word on the position equal to the counter value
         counter++;  // increase the counter by one
@@ -29,4 +43,5 @@
     setTimeout(function() {
         interval = setInterval(displayText, 200);
     }, 1000);
+    
 </script>
